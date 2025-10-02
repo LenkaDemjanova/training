@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Resume</title>
+    <style>
+        .footer {
+            background-color: lightgrey;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+        }
+
+        section {
+            padding: 10px;
+            border: 1px solid black;
+            margin: 10px;
+        }
+
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+<header class="header">
+    <h1 id="top">Lenka Kanova Resume</h1></header>
+<nav class="navbar">
+    <ul>
+        <li><a href="#Experience">Experience</a></li>
+        <li><a href="#Education">Education</a></li>
+        <li><a href="#Skills">Skills</a></li>
+        <li><a href="#Interest">Interests</a></li>
+        <li><a href="#Contact">Contact</a></li>
+        <li><a href="study.html">Study</a></li>
+    </ul>
+</nav>
+<article>
+    <p>Welcome to my website, hope you enjoy it.</p>
+    <hr>
+    <p>My name is Lenka Kanova</p>
+    <img src="fox.png" alt="fox" width="200">
+</article>
+<section id="Experience">
+    <h2>Experience</h2>
+    <table>
+        <colgroup>
+            <col span="1" style="background-color:lightblue">
+        </colgroup>
+        <tr>
+            <th>Company</th>
+            <th>Details</th>
+            <th>Years</th>
+        </tr>
+        <tr>
+            <td>T-Systems</td>
+            <td>Process Specialist</td>
+            <td>2016-2018</td>
+        </tr>
+        <tr>
+            <td>T-Systems</td>
+            <td>Controller II</td>
+            <td>2018-2019</td>
+        </tr>
+        <tr>
+            <td>Deutsche Telekom IT</td>
+            <td>Application Developer</td>
+            <td>2019-present</td>
+        </tr>
+    </table>
+</section>
+<section id="Education">
+    <h2>Education</h2>
+    <dl>
+        <dt>Technical University of Kosice</dt>
+        <dd>Faculty of Economy</dd>
+        <dd>Finance, Banking and Investment</dd>
+    </dl>
+</section>
+<section id="Skills">
+    <h2>Skills</h2>
+    <ol>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript
+            <ul>
+                <li>DOM</li>
+                <li>Node</li>
+                <li>jQuery</li>
+            </ul>
+        </li>
+    </ol>
+</section>
+<section id="Interest">
+    <h2>Interests</h2>
+    <ul>
+        <li>Hiking</li>
+        <li>Running</li>
+        <li>Folklore dancing</li>
+        <li>Skiing</li>
+    </ul>
+</section>
+<section id="Contact">
+    <h2>Contact me</h2>
+    <p>Contact me at my email <a href="mailto:lenkademjanova@gmail.com"> My Email Address</a></p>
+</section>
+
+<div id="bottom" style="padding-bottom: 40px"> This is bottom of page. <a href="#top"> Go to the top.</a></div>
+
+<footer class="footer">
+    Copyright © 2025 Lenka Kanova
+</footer>
+
+<!-- This is a comment -->
+</body>
+</html>
