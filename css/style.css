@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Kablammo&family=Merienda:wght@300..900&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Merienda', cursive;
+}
+
+.logo-img{
+    width: 100px;
+    position: absolute;
+}
+
+header>div{
+    padding: 10px;
+}
+
+.logo{
+    float: left;
+}
+
+.heading{
+    color: black;
+    font-family: 'Merienda', cursive;
+    font-size: 40px;
+    padding: 10px;
+    text-align: center;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+header nav {
+    margin: 0;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    float: left;
+}
+
+header nav ul li {
+    display: inline-block;
+}
+
+header nav a {
+    display: block;
+    padding: 0 10px;
+    font-size: 20px;
+    line-height: 40px;
+    color: white;
+    text-decoration: none;
+    background-color: black;
+}
+
+header nav a:hover {
+    background-color: #e3e3e3;
+    color: black;
+}
+
+.menu{
+    display: none;
+    padding: 5px;
+}
+
+.menu:hover {
+    cursor: pointer;
+    background-color: #e3e3e3;
+    color: black;
+}
+
+.hide{
+    display: block;
+}
+
+.main{
+    background-color: #e3e3e3;
+    clear: both;
+}
+
+.main img {
+    float: left;
+    padding: 0;
+    max-width: 100%;
+    border: 10px solid white;
+    margin: 5px;
+}
+
+.main article{
+    padding: 10px;
+    font-size: 18px;
+    border-bottom: 1px solid black;
+    overflow: hidden;
+}
+
+.footer{
+    background-color: black;
+    text-align: center;
+    padding: 10px 0;
+}
+
+footer div{
+    color: white;
+}
+
+@media all and (max-width: 600px) {
+    header nav ul li{
+        display: block;
+        text-align: center;
+    }
+
+    header nav ul {
+        width: 100%;
+    }
+
+    .heading{
+        position: relative;
+        margin-bottom: 0;
+        padding: 0;
+    }
+    .menu{
+        width: 100%;
+        background-color: black;
+        color: white;
+        display: block;
+        text-align: center;
+        font-size: 20px;
+        position: relative;
+    }
+
+    .hide{
+        display: none;
+    }
+
+    .logo-img{
+        width: 100px;
+        position: absolute;
+    }
+
+    .main img {
+        width: 100%;
+    }
+}
