@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Kablammo&family=Merienda:wght@300..900&display=swap');
 
-*{
+* {
     box-sizing: border-box;
 }
 
@@ -8,20 +8,20 @@ body {
     font-family: 'Merienda', cursive;
 }
 
-.logo-img{
+.logo-img {
     width: 100px;
     position: absolute;
 }
 
-header>div{
+header > div {
     padding: 10px;
 }
 
-.logo{
+.logo {
     float: left;
 }
 
-.heading{
+.heading {
     color: black;
     font-family: 'Merienda', cursive;
     font-size: 40px;
@@ -45,6 +45,7 @@ header nav ul {
 
 header nav ul li {
     display: inline-block;
+    position: relative;
 }
 
 header nav a {
@@ -62,7 +63,7 @@ header nav a:hover {
     color: black;
 }
 
-.menu{
+.menu {
     display: none;
     padding: 5px;
 }
@@ -73,11 +74,11 @@ header nav a:hover {
     color: black;
 }
 
-.hide{
+.hide {
     display: block;
 }
 
-.main{
+.main {
     background-color: #e3e3e3;
     clear: both;
 }
@@ -90,25 +91,106 @@ header nav a:hover {
     margin: 5px;
 }
 
-.main article{
+.main article {
     padding: 10px;
     font-size: 18px;
     border-bottom: 1px solid black;
     overflow: hidden;
 }
 
-.footer{
+.footer {
     background-color: black;
     text-align: center;
     padding: 10px 0;
 }
 
-footer div{
+footer div {
     color: white;
 }
 
+.gallery {
+    position: relative;
+    max-width: 600px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.gallery-content {
+    position: relative;
+    overflow: hidden;
+}
+
+.gallery-img {
+    display: none;
+    width: 100%;
+    border-radius: 10px;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.gallery-img.active {
+    display: block;
+    opacity: 1;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+.caption {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: black;
+    min-width: 180px;
+    z-index: 1;
+}
+
+.dropdown.open .dropdown-content { display: block; }
+
+.dropdown-content li {
+    display: block;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 8px 12px;
+    display: block;
+    text-align: left;
+    background-color: black;
+}
+
+.dropdown-content a:hover {
+    background-color: #e3e3e3;
+    color: black;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
 @media all and (max-width: 600px) {
-    header nav ul li{
+    header nav ul li {
         display: block;
         text-align: center;
     }
@@ -117,12 +199,13 @@ footer div{
         width: 100%;
     }
 
-    .heading{
+    .heading {
         position: relative;
         margin-bottom: 0;
         padding: 0;
     }
-    .menu{
+
+    .menu {
         width: 100%;
         background-color: black;
         color: white;
@@ -132,16 +215,25 @@ footer div{
         position: relative;
     }
 
-    .hide{
+    .hide {
         display: none;
     }
 
-    .logo-img{
+    .logo-img {
         width: 100px;
         position: absolute;
     }
 
     .main img {
         width: 100%;
+    }
+
+    .dropdown {
+        display: block;
+        width: auto;
+    }
+
+    .dropdown-content a {
+        text-align: center;
     }
 }

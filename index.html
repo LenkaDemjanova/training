@@ -3,32 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <title>Varím Vegánsky</title>
-    <link rel="icon" type="image/png" href="../img/logo.png">
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" type="image/png" href="img/logo.png">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-<script src="../js/app.js"></script>
+<script src="js/app.js"></script>
 <header class="header">
     <div>
         <div class="logo">
-            <img src="../img/logo.png" alt="Logo" class="logo-img"></div>
+            <img src="img/logo.png" alt="Logo" class="logo-img"></div>
         <div class="heading">Varím Vegánsky</div>
     </div>
     <nav class="nav">
         <div class="menu">Menu</div>
         <ul class="hide-menu hide">
             <li><a href="index.html">Domov</a></li>
-            <li><a href="recipes.html">Recepty</a></li>
-            <li><a href="article.html">Články</a></li>
-            <li><a href="contact.html">Kontakt</a></li>
+            <li class="dropdown"><a href="#" class="dropbtn">Recepty</a>
+                <ul class="dropdown-content">
+                    <li><a href="html/christmas.html">Vianočné recepty</a></li>
+                </ul>
+            </li>
+            <li><a href="html/article.html">Články</a></li>
+            <li><a href="html/contact.html">Kontakt</a></li>
         </ul>
     </nav>
 </header>
 
-<div class="main">
+<main class="main">
     <article>
-        <img src="../img/kuchar.png" width="500px" alt="Kuchar">
+        <img src="img/kuchar.png" width="500px" alt="Kuchar">
         Vitajte na Varím Vegánsky!
         Volám sa Miroslav Demjan a som vášnivý vegánsky kuchár. Na tomto webe nájdete množstvo chutných a jednoduchých
         vegánskych receptov, ktoré si môžete pripraviť doma.
@@ -37,7 +41,7 @@
         Prečo vegánstvo? Verím, že strava založená na rastlinách je nielen prospešná pre naše zdravie, ale aj pre našu
         planétu. Pridajte sa ku mne na tejto ceste a objavte, ako chutná a uspokojujúca môže byť vegánska kuchyňa!
     </article>
-</div>
+</main>
 
 <footer class="footer">
     <div> Copyright © 2025 Lenka Kaňová
