@@ -29,9 +29,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     const images = document.querySelectorAll(".gallery-img");
-    const caption = document.querySelector(".caption");
-    const prev = document.querySelector(".prev");
-    const next = document.querySelector(".next");
 
     if (images.length) {
         fetch('../js/recipes.json')
@@ -64,7 +61,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     }, 1000);
                 }
 
-                // Ovládanie galérie
                 document.querySelector(".prev")?.addEventListener("click", () => {
                     index = (index - 1 + images.length) % images.length;
                     showImage(index);
