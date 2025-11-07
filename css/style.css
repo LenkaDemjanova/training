@@ -6,11 +6,20 @@
 
 body {
     font-family: 'Merienda', cursive;
+    display: flex;
+    flex-direction: column;
+}
+
+html, body {
+height: 100%;
+margin: 0;
+padding: 0;
+overflow-y: auto;
 }
 
 .logo-img {
     width: 100px;
-    position: absolute;
+    position: relative;
 }
 
 header > div {
@@ -80,7 +89,20 @@ header nav a:hover {
 
 .main {
     background-color: #e3e3e3;
-    clear: both;
+    padding: 20px 10px 80px;
+    box-sizing: border-box;
+    height: 100%;
+}
+
+
+.main_recipes {
+    background-color: #e3e3e3;
+    padding: 20px 10px 80px;
+    box-sizing: border-box;
+}
+
+.main_recipes h2 {
+    text-align: center;
 }
 
 .main img {
@@ -94,14 +116,18 @@ header nav a:hover {
 .main article {
     padding: 10px;
     font-size: 18px;
-    border-bottom: 1px solid black;
     overflow: hidden;
+    text-align: justify;
+    margin: 5px;
 }
 
 .footer {
     background-color: black;
     text-align: center;
     padding: 10px 0;
+    bottom: 0;
+    width: 100%;
+    position: fixed;
 }
 
 footer div {
@@ -123,24 +149,21 @@ footer div {
 .gallery-img {
     display: none;
     width: 100%;
-    border-radius: 10px;
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
+    border: 10px solid white;
 }
 
 .gallery-img.active {
     display: block;
-    opacity: 1;
 }
 
 .prev, .next {
-    position: absolute;
+    position: relative;
     top: 50%;
-    transform: translateY(-50%);
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
     border: none;
     padding: 10px;
+    margin: 10px;
     cursor: pointer;
     font-size: 24px;
 }
@@ -151,6 +174,7 @@ footer div {
 .caption {
     margin-top: 10px;
     font-size: 18px;
+    text-align: justify;
 }
 
 .dropdown {
@@ -220,8 +244,9 @@ footer div {
     }
 
     .logo-img {
-        width: 100px;
-        position: absolute;
+        width: 60px;
+        position: relative;
+
     }
 
     .main img {

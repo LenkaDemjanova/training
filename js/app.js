@@ -38,12 +38,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 const caption = document.querySelector(".caption");
 
                 let index = 0;
-                let isTransitioning = false;
 
                 function showImage(i) {
-                    if (isTransitioning) return;
-                    isTransitioning = true;
-
                     const current = document.querySelector(".gallery-img.active") || images[0];
                     const nextImg = images[i];
                     current.classList.remove("active");
@@ -51,14 +47,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
                     const recipe = data.find(r => nextImg.src.includes(r.image));
                     if (caption && recipe) {
-                        caption.innerHTML = `<strong>${recipe.title}</strong><br>
-        <b>Potrebujeme:</b><ul>${recipe.ingredients.map(i => `<li>${i}</li>`).join('')}</ul>
-        <b>Postup:</b> ${recipe.instructions}`;
+                        caption.innerHTML = `<h3 class="recipe-title">${recipe.title}</h3>
+        <div class="recipe-content">
+          <div class="recipe-text">
+            <h4>Potrebujeme:</h4>
+            <ul>${recipe.ingredients.map(i => `<li>${i}</li>`).join("")}</ul>
+            <h4>Postup:</h4>
+            <p>${recipe.instructions}</p>
+          </div>
+        </div>
+`;
                     }
-
-                    setTimeout(() => {
-                        isTransitioning = false;
-                    }, 1000);
                 }
 
                 document.querySelector(".prev")?.addEventListener("click", () => {
